@@ -1,8 +1,9 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import MovieTitle from './MovieTitle';
 import SearchResults from './SearchResults';
+import Nominations from './Nominations';
 const MoviesLayout = styled.div`
 
     display: flex;
@@ -16,9 +17,16 @@ const Movies = styled.div`
 
     display: flex;
     flex-direction: row;
+    /* justify-content: space-between; */
 `
 
 const MovieList = (props) => {
+
+    // const [nominatedMovies, setNominatedMovies] = useState({})
+    // const [searchedMovies, setSearchedMovies] = useState({})
+    
+
+    // http://www.omdbapi.com/?i=tt3896198&apikey=785e8c06
 
     return (
 
@@ -27,8 +35,8 @@ const MovieList = (props) => {
                 <p>this is a test</p>
                 <MovieTitle/>
                 <Movies>
-                    <p>this is a search results list</p>
-                    <p>this is a nominations list</p>
+                    <SearchResults/>
+                    <Nominations/>
                 </Movies>
             </MoviesLayout>
 
