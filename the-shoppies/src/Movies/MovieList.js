@@ -32,7 +32,7 @@ const MovieList = (props) => {
 
         <div>
             <MoviesLayout>
-                <p>this is a test</p>
+                <p>The Shoppies</p>
                 <MovieTitle/>
                 <Movies>
                     <SearchResults/>

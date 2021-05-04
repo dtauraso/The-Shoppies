@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
-import { setSearchedMovies } from './Redux/Actions'
+import { setSearchedMovies } from '../Redux/Actions'
 
 import styled from 'styled-components';
 
@@ -11,12 +11,6 @@ const MovieTitleLayout = styled.div`
 
 `
 
-
-const MovieTitleFormLayout = styled.div`
-
-`
-
-
 const MovieTitle = (props) => {
 
     const { Root: {
@@ -25,25 +19,14 @@ const MovieTitle = (props) => {
             } = props
     // state refresh from redux isn't resetting movieTitle
     const [movieTitle, setMovieTitle] = useState('')
-    // useEffect(() => [
 
-    //     axios.get(`http://www.omdbapi.com/?s=${movieTitle.replace(' ', '%20')}&apikey=785e8c06`)
-    //         .then(res => {
-    //             console.log(res)
-    //         })
-    // ],[movieTitle])
-    const searchMovies = () => {
-        /*
-        search api for movies using movieTitle
-        */
-    }
     const handleSubmit = (event) => {
         event.preventDefault();
         axios.get(`http://www.omdbapi.com/?s=${movieTitle.replace(' ', '%20')}&apikey=785e8c06`)
             .then(res => {
                 console.log(res)
                 console.log({nominatedMovies, searchedMovies})
-                props.setSearchedMovies(res)
+                props.setSearchedMovies(res.data.Search, movieTitle)
             })
     }
     
@@ -78,4 +61,3 @@ export default connect(
     mapStateToProps,
     { setSearchedMovies }
 )(MovieTitle)
-// export default MovieTitle;
