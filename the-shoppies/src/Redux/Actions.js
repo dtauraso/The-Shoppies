@@ -12,6 +12,6 @@ export const updateMoviePreference = (movieTitle, preferenceName) => dispatch =>
     dispatch({
         type: 'updateMoviePreference',
         payload: movieTitle,
-        meta: {functionName: preferenceName}
+        meta: {reducerName: preferenceName}
     })
 }

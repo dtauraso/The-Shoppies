@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 // import './App.css';
-import MovieList from './Movies/MovieList';
+import MovieSearchInterface from './Movies/MovieSearchInterface';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <MovieList/>
+      <MovieSearchInterface/>
     </div>
   );
 }
