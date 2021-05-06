@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import MovieTitle from './MovieTitle';
 import MovieList from './MovieList';
-import SearchResults from './SearchResults';
-import Nominations from './Nominations';
+import Banner from './Banner';
 const MoviesLayout = styled.div`
 
     display: flex;
@@ -32,13 +31,13 @@ const MovieSearchInterface = (props) => {
     return (
 
         <div>
+            {/* put notifications on this page */}
             <MoviesLayout>
+                <Banner/>
                 <p>The Shoppies</p>
                 <MovieTitle/>
                 <Movies>
-                    {/* <SearchResults/> */}
                     <MovieList moviePreferences={'search'}/>
-                    {/* <Nominations/> */}
                     <MovieList moviePreferences={'nominations'}/>
                 </Movies>
             </MoviesLayout>

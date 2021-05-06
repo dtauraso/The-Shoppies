@@ -37,12 +37,11 @@ const ImageStyle = styled.img`
 const MovieList = (props) => {
 
     const { Root: {
-        lastSearchedTitle,
         movieListCategory },
         moviePreferences
     } = props
     // console.log(searchedMovies)
-    console.log({movieListCategory})
+    // console.log({movieListCategory})
     const { string, buttonText, reducerName, container } = movieListCategory[moviePreferences]
     
     return (

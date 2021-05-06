@@ -1,5 +1,4 @@
 const initialState = {
-    lastSearchedTitle: '',
     movieListCategory: {
         search: {
             string: 'Results for ""',
@@ -91,7 +90,7 @@ const Reducers = (state = initialState, action) => {
                 [Title]: {
                     year: Year,
                     poster: Poster,
-                    isNominated: Title in state.movieListCategory.nominations? true: false
+                    isNominated: Title in state.movieListCategory.nominations.container? true: false
                 }
             }
         })
