@@ -1,4 +1,5 @@
 ## GitHub Pages isn't working
+## Download the project to try it out
 
 ## Welcome to GitHub Pages
 
