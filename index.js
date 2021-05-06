@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './src/App';
+import reportWebVitals from './src/reportWebVitals';
 import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import logger from 'redux-logger'
-import Reducers from './Redux/Reducers'
+import Reducers from './src/Redux/Reducers'
 import {BrowserRouter as Router} from 'react-router-dom'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
