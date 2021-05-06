@@ -17,9 +17,7 @@ const Banner = (props) => {
 
 const mapStateToProps = (state) => {
 
-    return {
-        Root: state
-    }
+    return { Root: state }
 }
 export default connect(
     mapStateToProps,
