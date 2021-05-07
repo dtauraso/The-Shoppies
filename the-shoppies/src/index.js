@@ -9,7 +9,7 @@ import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 import Reducers from './Redux/Reducers'
 import {BrowserRouter as Router} from 'react-router-dom'
-
+require('dotenv').config()
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export const store = createStore(
